@@ -1,6 +1,6 @@
 <template>
 
-   <div id="sidebar" class="shadow bg-white p-0 d-flex flex-column justify-content-between">
+   <div id="sidebar" class="pe-3 d-flex flex-column justify-content-between">
 
       <div class="mb-3">
       
