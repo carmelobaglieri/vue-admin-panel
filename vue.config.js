@@ -4,7 +4,7 @@ const path = require("path");
 module.exports = defineConfig({
   transpileDependencies: true,
   lintOnSave:false,
-  publicPath: '/wp-content/plugins/mi-plugin/mi_vendor_dashboard/dist/',
+  publicPath: '/dist/',
   outputDir: path.resolve(__dirname, "../dist"),
 
   pages: {
