@@ -133,13 +133,9 @@ export default defineComponent({
    width: 100%;
    text-align: left;
    padding: 1rem;
-   font-size: .85rem;
+   font-size: 1rem;
    border-top-right-radius: 25px;
    border-bottom-right-radius: 25px;
-}
-.nav-link.active {
-   background: var(--bs-teal);
-   color: var(--bs-primary);
 }
 .nav-link:hover {
    color: var(--bs-gray-900);
@@ -151,8 +147,8 @@ export default defineComponent({
    box-shadow: unset;
 }
 .nav-link.router-link-active, .accordion-collapse .nav-link.router-link-active{
-   background: var(--bs-teal);
-   color: var(--bs-primary);
+   background: var(--bs-primary);
+   color: white;
 }
 .accordion-item{
    background: transparent;
