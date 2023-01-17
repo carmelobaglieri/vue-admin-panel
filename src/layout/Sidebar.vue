@@ -128,9 +128,9 @@ export default defineComponent({
 <style scoped>
 .nav-link, .accordion-button {
    color: var(--bs-gray-900);
-   background: white;
+   background: transparent;
    display: block;
-   width: 90%;
+   width: 100%;
    text-align: left;
    padding: 1rem;
    font-size: .85rem;
@@ -143,7 +143,7 @@ export default defineComponent({
 }
 .nav-link:hover {
    color: var(--bs-gray-900);
-   background: var(--bs-gray-100);
+   background: var(--bs-gray-200);
 }
 @media (min-width: 768px){
 }
