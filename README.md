@@ -2,7 +2,7 @@
 
 ## Clone project
 ```
-git clone https://github.com/carmelobaglieri/vue-admin-panel.git
+git clone https://github.com/carmelobaglieri/vue-admin-panel.git myproject
 ```
 
 ## Project setup
