@@ -1,0 +1,29 @@
+<template>
+
+
+
+</template>
+
+<script>
+
+import { defineComponent } from 'vue';
+import { Utils } from "@/inc/Utils";
+
+export default defineComponent({
+   name: 'Base',
+   mixins: [Utils],
+   components: {
+
+   },
+   data(){
+      return {
+
+      }
+   },
+   /*created(){
+
+   },
+   mounted(){
+   }*/
+});
+</script>

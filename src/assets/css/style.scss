@@ -1,0 +1,490 @@
+/* $website: 'https://www.claudiobelotti.it/'; */
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "~@/../node_modules/bootstrap/scss/_functions";
+/* @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css?family=Rubik:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
+
+// 2. Include any default variable overrides here
+//root
+$grid-gutter-width: 30px;
+
+$body-bg: #f5fafc;
+$body-color: #79869f;
+
+$primary: #0b7a7a;
+$secondary: #ad0404;
+$danger: #ff4136;
+$dark: #070707;
+$gray: #707070;
+$light-gray: #e0e1f2;
+$green: #49a349;
+$yellow: #ffc107;
+$blue: #0f3f62;
+$teal: #dfeeee;
+
+$font-family-sans-serif: 'Rubik';
+$font-size-base: 1rem;
+$line-height-base: 1.2;
+$small-font-size: 0.875em;
+
+$h3-font-size: 1.5rem;
+$h5-font-size: 1.15rem;
+
+$input-border-radius: 0.35rem;
+$btn-border-radius: 0.35rem;
+$radius: 0.35rem;
+
+//button
+$btn-border-width: 0;
+$btn-line-height: 1.5;
+
+//bottom navigation
+$bottomNavigationBg: #fff;
+$bottomNavigationLink: #b5b5b5;
+$bottomNavigationLinkHover: #b5b5b5;
+$bottomNavigationBorderLink: $primary;
+
+//form
+$form-select-bg: #fff;
+
+$custom-colors: (
+  "blue": $blue,
+  "light-gray": $light-gray
+);
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "gray": $gray,
+  "dark": $dark,
+  "danger": $danger,
+  "success": $green,
+  "warning": $yellow,
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+//$theme-colors: map-remove($theme-colors, "info", "light", "dark");
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "~@/../node_modules/bootstrap/scss/_variables";
+@import "~@/../node_modules/bootstrap/scss/_mixins";
+
+// 4. Include any optional Bootstrap components as you like
+@import "~@/../node_modules/bootstrap/scss/bootstrap";
+
+.btn-primary {
+  @include button-variant($primary, darken($primary, 7.5%), white);
+}
+.btn-secondary {
+  @include button-variant($secondary, darken($secondary, 7.5%), white);
+}
+
+.text-blue{
+  color: $blue;
+}
+
+// Animations
+.transition-all{
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  transition: all .2s ease;
+}
+@-webkit-keyframes rotating{from{-ms-transform:rotate(0);-moz-transform:rotate(0);-webkit-transform:rotate(0);-o-transform:rotate(0);transform:rotate(0)}to{-ms-transform:rotate(360deg);-moz-transform:rotate(360deg);-webkit-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes rotating{from{-ms-transform:rotate(0);-moz-transform:rotate(0);-webkit-transform:rotate(0);-o-transform:rotate(0);transform:rotate(0)}to{-ms-transform:rotate(360deg);-moz-transform:rotate(360deg);-webkit-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg)}}.rotating{display:inline-block; -webkit-animation:rotating .7s linear infinite;-moz-animation:rotating .7s linear infinite;-ms-animation:rotating .7s linear infinite;-o-animation:rotating .7s linear infinite;animation:rotating .7s linear infinite}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+/* slide */
+.slide-enter-active {
+  height: 0;
+  padding-top:0!important;
+  transition: all .3s ease-in;
+}
+.slide-leave-active {
+  padding-top:0!important;
+  min-height: unset;
+  height: 0;
+  transition: all .3s ease-out;
+}
+.slide-enter, .slide-leave-to
+/* .slide-leave-active below version 2.1.8 */ {
+  overflow: hidden;
+  opacity: 0;
+}
+
+// 5. Add additional custom code here
+/*settings */
+.select2-container {
+  width: 100%!important;
+}
+.select2-container .select2-selection {
+  min-height: 41px!important;
+  border: 1px solid var(--bs-gray-200)!important;
+}
+.select2-container--focus .select2-selection, .select2-container--focus .select2-search__field {
+  background-color: #eaeaea!important;
+  background-image: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3e%3cpath fill=%27none%27 stroke=%27%23343a40%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27M2 5l6 6 6-6%27/%3e%3c/svg%3e');
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+}
+.select2-container .select2-search__field{
+  display: block;
+  margin: 0px 5px !important;
+  min-height: 36px;
+  padding: 0!important;
+}
+.select2-container--focus .select2-selection__choice{
+  background-color: #fff!important;
+}
+.select2-container .select2-selection__choice__remove {
+  padding: 3px 6px;
+}
+.hidden{
+  overflow: hidden!important;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+img{
+  max-width: 100%;
+}
+.radius-10 {
+  border-radius: 10px!important;
+}
+.lh-1{
+  line-height: 1!important;
+}
+.d-flex-center-between{
+  display: flex!important;
+  align-items: center!important;
+  justify-content: space-between!important;
+}
+.d-flex-end-between{
+  display: flex!important;
+  align-items: flex-end!important;
+  justify-content: space-between!important;
+}
+.d-flex-center-center{
+  display: flex!important;
+  align-items: center!important;
+  justify-content: center!important;
+}
+.d-flex-center-start{
+  display: flex!important;
+  align-items: center!important;
+  justify-content: flex-start!important;
+}
+.d-flex-center-end{
+  display: flex!important;
+  align-items: center!important;
+  justify-content: flex-end!important;
+}
+.btn-big{
+  min-height: 45px;
+  border-radius: 20px;
+}
+.pointer{
+  cursor: pointer;
+}
+.overlay-loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #000000a1;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 51px;
+}
+
+/* links */
+.bg-primary a{
+  color: white;
+}
+
+/* layouts */
+body {
+  overflow-x: hidden;
+  /* background: rgb(234,234,234);
+  background: -moz-linear-gradient(0deg, #f2f2f2 0%, #fff 50%, #f2f2f2 100%);
+  background: -webkit-linear-gradient(
+0deg, #f2f2f2 0%, #fff 50%, #f2f2f2 100%);
+  background: linear-gradient(
+0deg, #f2f2f2 0%, #fff 50%, #f2f2f2 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f2f2f2",endColorstr="#f2f2f2",GradientType=1); */
+}
+#app {
+  font-family: $font-family-sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left) !important;
+}
+
+/* content */
+#content-wrapper{
+  min-height: 100vh;
+  background-color: #f8f9fc;
+}
+#content-wrapper #content{
+  display: flex;
+  flex-direction: column;
+}
+#content .container-fluid{
+  overflow-x: hidden;
+}
+
+/*sidebar*/
+#sidebar {
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  position: fixed;
+  z-index: 5;
+  width: 280px;
+  -webkit-transition: transform 0.2s;
+  -moz-transition: transform 0.2s;
+  -o-transition: transform 0.2s;
+  -ms-transition: transform 0.2s;
+  transition: transform 0.2s;
+}
+
+@media (min-width: 768px){
+  #content-wrapper{
+    margin-left: 280px;
+  }
+}
+
+@media (max-width: 767px){
+  body:not(.sidebar-toggled) #sidebar {
+    transform: translateX( -280px );
+  }
+  body.sidebar-toggled #content-wrapper{
+    cursor: pointer;
+  }
+  body.sidebar-toggled #content-wrapper:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    background: rgba(0,0,0,0.5);
+  }
+}
+
+/* breadcrumbs */
+.breadcrumb{
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 23px;
+  background: $gray;
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+.slash{
+  margin: 0 5px;
+}
+.breadcrumb .text{
+  color: $primary;
+}
+/*main*/
+main{
+  margin-top: 72px;
+  margin-bottom: 60px;
+  min-height: calc(100vh - 132px);
+}
+main > .container{
+  padding: 20px;
+}
+main > .container-alt{
+  padding: 20px;
+}
+main > .container > div > .fa-spinner{
+  font-size: 25px;
+}
+
+/*bottom navigation*/
+#bottom-nav{
+  background-color: $bottomNavigationBg;
+}
+#bottom-nav a{
+  color: $bottomNavigationLink;
+}
+#bottom-nav a:hover, #bottom-nav a:active, #bottom-nav a:focus{
+  color: $bottomNavigationLinkHover;
+}
+#bottom-nav a.router-link-exact-active:before, #bottom-nav a:hover:before {
+  background: $bottomNavigationBorderLink;
+}
+
+/* Typography */
+p{
+  line-height: 1.35;
+}
+main.single-post a {
+  color: $primary;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+/* components */
+.spinner{
+  display: flex!important;
+  align-items: center!important;
+  justify-content: center!important;
+  position: relative;
+}
+.spinner i:before{
+  position: relative;
+  top: 1px;
+}
+.bg-cover{
+  background-size: cover;
+}
+.bg-right{
+  background-position: 30% 50%;
+}
+.box-light{
+  box-shadow: 0 0.25rem 0.5rem rgb(0 0 0 / 15%);
+  /* border: 1px solid #eaeaea; */
+  background-color: white;
+  border-radius: $radius;
+  padding: 1rem 0.75rem;
+  overflow: hidden;
+  position: relative;
+}
+/*list*/
+ul.list-with-icon {
+  padding: 0;
+  margin: 0;
+}
+ul.list-with-icon li {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 15px;
+}
+ul.list-with-icon li i{ margin-right: 7px;}
+hr{
+  border-bottom: 1px solid gainsboro;
+  width: 100%;
+  opacity: 1;
+}
+
+/* orizontal scrollview */
+.orizontal-scroll-view{
+  padding: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.orizontal-scroll-view::-webkit-scrollbar {
+  display: none;
+}
+.orizontal-scroll-view > *:not(:last-child){
+  margin-right: 1.5rem;
+}
+/* errors */
+.errors .error, .errors .error a {
+  border-radius: $radius;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+.errors .error.type-error{
+  background: #d33;
+}
+.errors .error.type-success{
+  background: green;
+}
+/* forms */
+.form-label{
+  font-weight: 600;
+}
+.form-input, .form-select {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid var(--bs-gray-200);
+  border-radius: $radius;
+  outline: none;
+  box-shadow: unset;
+}
+.form-input:focus, .form-select:focus{
+  background-color: #eaeaea;
+}
+.form-control{
+  padding: 10px 15px;
+  background-color: transparent;
+}
+textarea{
+  min-height: 100px;
+}
+.pass-wrap{
+  position: relative;
+}
+.pass-wrap .switcher {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  text-align: center;
+  line-height: 46px;
+}
+
+.back-btn{
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  margin-bottom: .5rem;
+  font-weight: bold;
+  color: var(--bs-gray-600);
+}
+
+/* tel input*/
+.vue-tel-input{
+  border: $input-border-width solid $input-border-color;
+  border-radius: $input-border-radius;
+}
+.vue-tel-input:focus-within {
+  color: $input-focus-color;
+  background-color: $input-focus-bg;
+  border-color: $input-focus-border-color;
+  outline: 0;
+  @if $enable-shadows {
+    @include box-shadow($input-box-shadow, $input-focus-box-shadow);
+  } @else {
+    // Avoid using mixin so we can pass custom focus shadow properly
+    box-shadow: $input-focus-box-shadow;
+  }
+}
+.vti__input:focus{
+  background-color: $input-focus-bg;
+}
+.vti__input{
+  color: $input-color;
+}
+
+/* external css to override or adjust styles*/
+/* @import url($website+'/wp-content/plugins/app-controller/assets/css/public.css'); */
+@import "~@/assets/css/custom.scss";

@@ -1,0 +1,78 @@
+.h2, h2 {
+   color: var(--bs-blue);
+}
+.max-100 {
+   max-width: 100px;
+   margin: 0 auto;
+}
+.max-180 {
+   max-width: 180px;
+   margin: 0 auto;
+}
+.max-400 {
+   max-width: 400px;
+   margin: 0 auto;
+}
+.max-600 {
+   max-width: 600px;
+   margin: 0 auto;
+}
+.box-content, .box-head {
+   padding: 20px;
+}
+.box-head {
+   background-color: var(--bs-primary);
+   color: #fff;
+}
+
+.box-light .title {
+   color: var(--bs-blue);
+}
+.box-light .ext-link {
+   position: absolute;
+   right: 20px;
+   top: 30px;
+   text-decoration: none;
+}
+
+.btn-check:active+.btn-primary-light, .btn-check:checked+.btn-primary-light, .btn-check:focus+.btn-primary-light, .btn-primary-light, .btn-primary-light.active, .btn-primary-light:active, .btn-primary-light:focus, .btn-primary-light:hover, .show>.btn-primary-light.dropdown-toggle {
+   color: var(--bs-primary);
+   background-color: var(--bs-teal);
+   border-color: var(--bs-primary);
+   border-width: 1px;
+}
+
+@media (min-width: 576px){
+   .p-big {
+      padding: 50px;
+   }
+}
+
+.nav-tabs.top{
+   flex-wrap: nowrap;
+   border-bottom: 0;
+   margin-bottom: 25px;
+}
+.nav-tabs.top li{
+   width: 100%;
+}
+.nav-tabs.top .nav-link {
+   width: 100%;
+   border: none;
+   margin-bottom: 0;
+   color: var(--bs-gray);
+   text-transform: uppercase;
+}
+.nav-tabs.top .nav-link.active {
+   color: var(--bs-primary)!important;
+   border-bottom: 2px solid var(--bs-primary)!important;
+}
+
+th {
+   font-weight: 600;
+   color: var(--bs-blue);
+}
+.table tbody > * > *{
+   padding: 0.5rem 0.5rem;
+   background-color: white;
+}
