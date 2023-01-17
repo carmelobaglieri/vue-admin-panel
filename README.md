@@ -1,4 +1,4 @@
-# 1 vue-admin-panel
+# vue-admin-panel
 
 ## Clone project
 ```
